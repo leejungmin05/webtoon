@@ -34,7 +34,7 @@ class ApiService {
 
     if (response.statusCode == 200) {
       final webtoon = jsonDecode(response.body);
-      WebtoonDetailModel.fromJson(webtoon);
+      return WebtoonDetailModel.fromJson(webtoon);
     }
     throw Error();
   }
